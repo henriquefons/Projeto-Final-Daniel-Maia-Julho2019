@@ -1,3 +1,64 @@
 body{
-    background-color: black;
+    background-color: #FBFBFF !important;
+    /* background: url(../img/Bandeira_de_Várzea_da_Palma.jpg) !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    background-size: 100% !important; */
+}
+
+.jumbotron {
+    background-color: #002626 !important;
+    color: #F0EDEE !important;
+}
+
+.navbar{
+    background-color: #002626 !important;
+    color: #F0EDEE !important;
+}
+
+.navbar a{
+    color: #F0EDEE !important;
+}
+
+#carouselIndex{
+    height: 100%;
+    border: 1px black solid;
+}
+
+.textcarousel{
+
+}
+
+.linksin{
+    margin-top: 30px;
+}
+
+.efeitoParallax{
+    background: url(../img/FORRO\ DA\ PALMA.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallaxTitle{
+    padding: 0;
+}
+
+.tamanhoParallax{
+    height: 400px;
+    width: 100%;
+}
+
+.img-circle {
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+}
+
+footer{
+    margin-top: 30px;
+    padding: 0;
+    height: 100px;
+    background-color: #0E4749;
 }
