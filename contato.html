@@ -5,8 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/galeria.css" type="text/css">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Conheça Várzea da Palma</title>
+
+
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -20,11 +23,26 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 
+    <script src="jquery-3.4.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="scripts/scripts"></script>
+
     <link href="https://fonts.googleapis.com/css?family=Roboto|Rubik+Mono+One|Source+Code+Pro&display=swap"
         rel="stylesheet">
 
-    <script src="jquery-3.4.1.min.js" type="text/javascript"></script>
-    <script type="text/javascript" src="scripts/scripts"></script>
+    <script>
+        var padrao = /^\([0-9]{2}\)[0-9]{5}-[0-9]{4}$/;
+        function validar(input) {
+            if (!padrao.test(input.value)) {
+                //mensagem de erro
+                input.setCustomValidity('O número (' + input.value + ') não está no formato requerido. Por favor, corrija-o.');
+            }
+            else {
+                //limpa mensagem de erro
+                input.setCustomValidity('');
+            }
+            document.getElementById('msg-erro').innerHTML = input.validationMessage;
+        }
+    </script>
 </head>
 
 <body>
@@ -73,7 +91,7 @@
                             <a class="nav-link" href="https://www.varzeadapalma.mg.gov.br/" target="_blank">Site da
                                 prefeitura</a>
                         </li>
-                        
+
                         <li class="nav-item">
                             <a class="nav-link" href="contato.html">Contato</a>
                         </li>
@@ -88,115 +106,96 @@
     <section id="intro">
         <div class="jumbotron jumbotron-fluid text-center">
             <div class="container">
-                <h1 class="display-3">Cultura de Várzea da Palma</h1>
-                <p class="lead">Conheça mais sobre a cultura de Várzea da Palma!</p>
+                <h1 class="display-3">Quem sou eu!</h1>
+                <p class="lead">Entre em contato com o melhor programador Web de Várzea da Palma</p>
             </div>
         </div>
     </section>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2>Conheça o Guaicui - O berço historico regional</h2>
-            </div>
-
-            <div class="col-lg-7 text-center">
-                <p>Barra do Guaicuí é um distrito do município de Várzea da Palma, localizado na região do Alto São
-                    Francisco, no estado de Minas Gerais. A localidade é conhecida pela barra do rio das Velhas, que
-                    deságua no rio São Francisco. O nome Guaicuí significa, em língua tupi, "rio das Velhas". Lugar rico
-                    pela sua cultura, Guaicuí procura conhecer a sua prória história.</p>
-                <p>
-                    A região da Barra do Guaicuí foi ocupada pelos índios cariris, originados do Ceará. No século XVII,
-                    a região foi explorada por bandeirantes paulistas em busca de ouro, entre os quais Fernão Dias, que
-                    teria mandado construir uma igreja de pedra, que ficou inacabada em decorrência das febres palúdicas
-                    daquela época. Nesta mesma região, encontrou pedras verdes (supostamente esmeraldas). Afinal morreu
-                    de malária às margens do rio das Velhas e acredita-se que seu filho Garcia Rodrigues trouxe seus
-                    ossos para São Paulo, onde estão enterrados no Mosteiro de São Bento.
-                </p>
-
-                <p>
-                    Não se sabe ao certo o porquê foi deixada inacabada. O mais provável é que tenha sido em razão do
-                    ataque de malária (impaludismo) nos trabalhadores. Uma segunda versão é das enchentes do rio,
-                    naqueles tempos medonhas e que de tempos em tempos inundava toda a região. Coincide também com a
-                    expulsão dos jesuítas do Brasil, por ordem do Marquês de Pombal.
-                </p>
-            </div>
-
-            <div class="col-md-5">
-                <img class="featurette-image img-responsive center-block img02"
-                    src="img/Igreja de Pedra construída por indios em Barra do Guaicui, distrito de Várzea da Palma MG, Norte de Minas por Claudete Leite (4).jpg"
-                    alt="Generic placeholder image">
-            </div>
-
-        </div>
-    </div>
-
-    <hr>
 
     <section>
-        <div class="row">
-            <div class="efeitoParallax2 tamanhoParallax text-center linksin">
-                <h1></h1>
+
+        <div class="container">
+            <div class="row">
+                <div class="card col-lg-4 bg-light text-center">
+                    <img class="img-fluid featurette-image img-responsive center-block img02" src="img/fotoPessoal.jpeg"
+                        id="img03">
+                    <h2 class="card-title ">Henrique Fonseca</h2>
+                    <div class="card-text">
+                        <p>Henrique dos Santos Fonseca</p>
+                        <p>20 anos</p>
+                        <p>Cursando SI 6º Periodo</p>
+                        <p>E-mail: henriquefons@hotmail.com</p>
+                        <p>Contato: 38 9 99879811</p>
+                    </div>
+                    <a href="https://www.linkedin.com/in/henriquedsf/" class="btn btn-primary">Entre em contato</a>
+                </div>
+
+                <div class=" card col-lg-8 text-center bg-light">
+
+                    <h1 class="card-title">Formação Institucional</h1>
+                    <img class="img-fluid featurette-image img-responsive center-block img02" src="img/ifnmg.png"
+                        alt="ifnmg">
+                    <div class="img">
+                        <h5 class="card-title">IFNMG</h5>
+                        <p class="card-text lead">O Campus Pirapora foi criado através da Lei n.º 11.892, de 29 de
+                            dezembro
+                            de 2008, a partir da integração do CEFET de Januária e da Escola Agrotécnica Federal de
+                            Salinas, juntamente com as Unidades de Ensino Descentralizadas (UNEDs) de Almenara, Araçuaí,
+                            Arinos e Montes Claros. Assim, o Campus Pirapora tornou-se uma das Unidades de Ensino
+                            integrantes do Instituto Federal de Educação, Ciência e Tecnologia do Norte de Minas Gerais
+                            - IFNMG, que é administrado, coordenado e supervisionado pela Reitoria, órgão executivo do
+                            IFNMG, localizada em Montes Claros.
+
+                            O IFNMG - Campus Pirapora, primeira (e única) instituição educacional da esfera federal
+                            instalada na microrregião que oferece ensino regular, tem como missão promover uma educação
+                            pública de qualidade para que possa atender as demandas das cadeias produtivas, sociais e
+                            culturais locais e regionais, contribuindo para o crescimento de toda a região.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="row linksin">
+                <div class="col-md-12">
+
+
+                    <form method="GET" class="">
+                        <h2 class="text-center">Formulario de contato</h2>
+                        <table>
+                            <tr>
+                                <td><label for="nome">Nome: </label></td>
+                                <td><input type="text" id="nome" name="nome" placeholder="Insira seu nome" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label for="celular">Telefone: </label></td>
+                                <td> <input type="tel" id="celular" name="celular" onblur="validar(this)" class="cssval"
+                                        placeholder="Insira seu telefone"><label>Formato (00)00000-0000</label></td>
+                            </tr>
+                            <tr>
+                                <td><label for="email">E-mail: </label></td>
+                                <td><input type="email" id="email" placeholder="Insira seu email" required></td>
+                            </tr>
+                            <tr>
+                                <td><label for="msg">Mensagem: </label></td>
+                                <td><textarea rows="3" cols="80" id="msg" name="msg" placeholder="Observacoes"
+                                        required></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><button type="submit" id="submitButton">Enviar</button></td>
+                                <td><button type="reset">Limpar</button></td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
-
-    <div class="container linksin">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2>Comidas tipicas de Várzea da Palma</h2>
-            </div>
-
-            <div class="col-lg-12 ">
-                <p>As comidas típicas do nosso município foram trazidas, principalmente pelos tropeiros no final do Séc.
-                    XIX e pelos pioneiros que aqui chegaram para morar a partir de 1.910.</p>
-                <p>Nos primórdios, os tropeiros usavam nas suas longas viagens pelo sertão afora, carne seca, peixe
-                    seco, farinha e faziam a tradicional paçoca de carne, batida no pilão.</p>
-
-                <p>Os ribeirinhos instituiram comidas baseadas em peixe, como surubim em postas, peixe assado na areia,
-                    pirão de cabeça de surubim, e outras variedades de pratos servidos com peixe. Dentre as comidas
-                    típicas da nossa região podemos enumerar:</p>
-            </div>
-
-            <div class="col-md-3">
-                <img class="featurette-image img-responsive center-block img02" src="img/ct1.JPG"
-                    alt="Generic placeholder image">
-            </div>
-
-            <div class="col-md-3">
-                <img class="featurette-image img-responsive center-block img02" src="img/ct12.JPG"
-                    alt="Generic placeholder image">
-            </div>
-
-            <div class="col-md-3">
-                <img class="featurette-image img-responsive center-block img02" src="img/ct13.JPG"
-                    alt="Generic placeholder image">
-            </div>
-
-            <div class="col-md-3">
-                <img class="featurette-image img-responsive center-block img02" src="img/ct4.JPG"
-                    alt="Generic placeholder image">
-            </div>
-
-            <div class="col-md-12 linksin">
-                <p><strong> Os principais pratos são: </strong> </p>
-                <ul>
-                    <li>ARROZ BRANCO COM PEQUI</li>
-                    <li>ARROZ COM PEQUI E CARNE DE SOL</li>
-                    <li>ARROZ COM PEQUI E FRANGO</li>
-                    <li>FEIJÃO TROPEIRO</li>
-                    <li>CHURRASCO</li>
-                    <li>DOBRADINHA</li>
-                    <li>FRANGO COM ANGU E QUIABO</li>
-                    <li>CALDO DE COSTELA COM MANDIOCA</li>
-                </ul>
-            </div>
-
-        </div>
-
-    </div>
-    </div>
-
 
     <footer class="page-footer font-small blue pt-4">
 
@@ -262,7 +261,6 @@
         <a href=".otopo" id="toTop" style="display: inline;"><img src="img/subir.png" alt="subir"></a>
 
     </footer>
-
 
 </body>
 

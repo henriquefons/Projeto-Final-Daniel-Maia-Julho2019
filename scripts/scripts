@@ -100,3 +100,17 @@ $(document)
     }
     e.preventDefault(); // prevent the default action (scroll / move caret)
   });
+
+
+		var padrao = /^\([0-9]{2}\)[0-9]{5}-[0-9]{4}$/;
+		function validar(input) {
+			if (!padrao.test(input.value)) {
+				//mensagem de erro
+				input.setCustomValidity('O número (' + input.value + ') não está no formato requerido. Por favor, corrija-o.');
+			}
+			else {
+				//limpa mensagem de erro
+				input.setCustomValidity('');
+			}
+			document.getElementById('msg-erro').innerHTML = input.validationMessage;
+		}
