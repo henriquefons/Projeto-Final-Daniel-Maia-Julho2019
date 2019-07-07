@@ -37,8 +37,22 @@ body{
     margin-top: 30px;
 }
 
+.img02 {
+    border-radius: 10%;
+    height: 100%;
+    width: 100%;
+}
+
 .efeitoParallax{
     background: url(../img/FORRO\ DA\ PALMA.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.efeitoParallax2{
+    background: url(../img/Serrinha-vzp-varzea-da-palma-turismo-13.jpg);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
